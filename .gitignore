@@ -1,0 +1,6 @@
+/Build/*
+/Library/*
+/Logs/*
+/UserSettings/*
+/Assets/AmplifyShaderEditor/*
+/Assets/AmplifyShaderEditor.meta
