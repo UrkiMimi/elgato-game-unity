@@ -1,3 +1,5 @@
+// This script sucks and I'm way too lazy to comment all of this. Figure this horrid script out on your own lol
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

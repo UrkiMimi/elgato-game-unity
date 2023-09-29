@@ -25,11 +25,14 @@ public class PostEffect : MonoBehaviour
     [Range(0,1)]
     public float Desaturation;
 
+    // Instance the script and create new material on startup
     private void Awake()
     {
         instance = this;
+        mat = new Material(Shader.Find("Custom/PostEffect"));
     }
 
+    // Render screen
     void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
         if (mat == null)
@@ -50,6 +53,7 @@ public class PostEffect : MonoBehaviour
 
     }
     
+    // Adjust values if GameOver is called
     public void GameOver()
     {
         Desaturation = 1;

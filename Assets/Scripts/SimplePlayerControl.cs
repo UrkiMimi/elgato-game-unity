@@ -1,3 +1,5 @@
+// Heavily modified version of https://github.com/UrkiMimi/2D-Game-Plat-Demo/blob/main/Assets/Scripts/SimplePlayerControl.cs.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

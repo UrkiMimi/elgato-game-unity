@@ -4,13 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class AppleController : MonoBehaviour
-{
+{   
+    // Variables
     public float AppleFallSpeed;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -22,7 +18,7 @@ public class AppleController : MonoBehaviour
         );
     }
 
-    
+    // Quit game if you lose
     IEnumerator GameCrash()
     {
         yield return new WaitForSecondsRealtime(0.2f);
@@ -33,6 +29,7 @@ public class AppleController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll2D)
     {
+        // Run if statement if an apple collides with player
         if (coll2D.gameObject.layer == 6)
         {
             ScoreController.instance.AddScore();
@@ -41,6 +38,7 @@ public class AppleController : MonoBehaviour
         }
         else
         {
+            // Prepare GameOver and start GameCrash coroutine
             Time.timeScale = 0.1f;
             ScoreController.instance.Pipe();
             PostEffect.instance.GameOver();
